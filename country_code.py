@@ -1,5 +1,8 @@
+import requests
+from bs4 import BeautifulSoup
+
 def get_country_code(country_name):
-	new_name = country_name.replace(" ",         "_")
+	new_name = country_name.replace(" ", "_")
 	code = {}
 	url = "https://wikipedia.org/wiki/{}".format(new_name)
 	page = requests.get(url)
